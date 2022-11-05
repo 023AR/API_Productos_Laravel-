@@ -45,5 +45,7 @@ class CarritoController extends Controller
     public function destroy($id)
     {
         // Eliminar dato
+        DB::delete('delete from carrtio where id = $id');
+        return response()->json(['mensaje' => 'Producto eliminado'], 200);
     }
 }
